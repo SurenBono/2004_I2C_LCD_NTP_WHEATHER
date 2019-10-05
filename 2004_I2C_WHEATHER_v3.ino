@@ -5,14 +5,14 @@
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 
-const char* ssid     = "Arduino Wifi";      // SSID of WIFI
-const char* password = "tm1010101";         // WIFI Password 
-String APIKEY = "e876574712e8cd87bad58bc226831414";
-String CityID = "1732811"; //Kluang
+const char* ssid     = "Arduino Wifi";      // WIFI SSID  
+const char* password = "************";      // WIFI Password 
+String APIKEY = "e876574712e8cd87bad58bc226831414"; // Get free Default API key from openweathermap.org
+String CityID = "1732811"; //Kluang  ...find yours...why openwheathermap not stick with standardised poscode instead..???
 
 const char* ntpServer = "pool.ntp.org";
-const long  gmtOffset_sec = 28800;       //My,Sg GMT = +8UTC*60*60 ,GREENWICH GMT = 0 UTC +(60*60)= 0 
-const int   daylightOffset_sec = 0;
+const long  gmtOffset_sec = 28800;       //My,Sg GMT = +8 UTC*60*60 , GREENWICH GMT = 0 UTC +(60*60)= 0 
+const int   daylightOffset_sec = 0;	 // ???
 char buffer[80];
 int cursorPosition=0;
 
@@ -125,21 +125,23 @@ void loop() {
     { 
       lcd.clear();
       counter++;
-      pageOne(); // display 15 sec of Time with sec update 
+	    
+            pageOne();			 // display 15 sec of Time with sec update ..me have not know loop yet
 	    pageOne();
 	    pageOne();
-      pageOne();
+     	    pageOne();
 	    pageOne();
 	    pageOne();
-      pageOne();
+            pageOne();
 	    pageOne();
 	    pageOne();
 	    pageOne();
 	    pageOne();
 	    pageOne();
-      pageOne();
+            pageOne();
 	    pageOne();
 	    pageOne();
+	    
       for (int positionCounter = 0; positionCounter < 10; positionCounter++) {
       lcd.scrollDisplayLeft();
       delay(150);
@@ -149,16 +151,18 @@ void loop() {
       printLocalTimeOnly();
       //scrollDescription(weatherDescription);
       displayConditions(Temperature,Humidity,Pressure);
-	    pageTwo();                                            // display 5 sec of Time with min update
+	    
+	    pageTwo();                       // display 10 sec of Time with min update on pageTwo
 	    pageTwo();
 	    pageTwo();
 	    pageTwo();
 	    pageTwo();
-      pageTwo();
-      pageTwo();
-      pageTwo();
-      pageTwo();
-      pageTwo();
+      	    pageTwo();
+      	    pageTwo();
+            pageTwo();
+            pageTwo();
+            pageTwo();
+	    
       for (int positionCounter = 0; positionCounter < 10; positionCounter++) {
       lcd.scrollDisplayRight();
       delay(150);
@@ -251,8 +255,8 @@ void displayConditions(float Temperature,float Humidity, float Pressure)
 }
 void pageOne()
 {
-	  lcd.setCursor(1,1);
-	  printLocalTime();
+    lcd.setCursor(1,1);
+    printLocalTime();
     lcd.setCursor(11,1);
     printSecOnly();
     lcd.setCursor(10,3);
@@ -273,7 +277,7 @@ void displayGettingData()
   delay (1000);
   lcd.clear();
 }
-/*
+/* 			Not know how to scroll just description yet...the whole page scrolled
 void scrollDescription(String description)
 {
   lcd.setCursor(0,1);
