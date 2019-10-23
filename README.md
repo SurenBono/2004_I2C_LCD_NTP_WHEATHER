@@ -1,4 +1,4 @@
-# 2004_I2C_LCD_NTP_WHEATHER_v3
+# 2004_I2C_LCD_NTP_WHEATHER (https://openweathermap.org)
 Simple NTP Wheater Station for GMT +8 
 
 - Sync time delay Max 5 min
