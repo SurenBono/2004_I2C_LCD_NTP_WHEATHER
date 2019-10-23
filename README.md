@@ -2,8 +2,11 @@
 Simple NTP Wheater Station for GMT +8 
 
 - Sync time delay Max 5 min
-- 2 pageleft/right scrolled fx
+- 2 page left/right scrolled fx
 - 12 h with AM/PM Version
+     
+     23-10-19 v5 UPDATE: Added Localised Pressure Unit Conversion from hPa to kPa & psi as to compare to average tyre pressure.
+
 
   - %a Abbreviated weekday name
   - %A Full weekday name
