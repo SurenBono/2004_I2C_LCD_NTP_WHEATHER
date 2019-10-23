@@ -1,14 +1,16 @@
-#include <Wire.h> 
-#include <LiquidCrystal_I2C.h>
-#include <ESP8266WiFi.h>
-#include <ArduinoJson.h>
+//  https://srotogargees.business.site/
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+#include <Wire.h> 					// i2c related driver
+#include <LiquidCrystal_I2C.h>				// included in this repo
+#include <ESP8266WiFi.h>				// google how to add this
+#include <ArduinoJson.h>				// add from lib manager or the 2 other methods.
 
-const char* ssid     = "Arduino Wifi";      // SSID of WIFI of router /tetered smart phone...etc
-const char* password = "101010100";         // predefined WIFI Password  / sketch upload
-String APIKEY = "e876574712e8cd87bad58bc226831414";
-String CityID = "1732811"; //Kluang
+LiquidCrystal_I2C lcd(0x27, 20, 4);			// change certain parameters for 1602 LCD
+
+const char* ssid     = "Arduino Wifi";      		// SSID of WIFI of router /tetered smart phone...etc
+const char* password = "10101010";          		// pre-defined WIFI Password  / sketch upload
+String APIKEY = "e876574712e8cd87bad58bc226831414";	// get free default API key https://openweathermap.org
+String CityID = "1732811"; //Kluang			, find yours there, not a poscode.
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 28800;       //My,Sg GMT = +8UTC*60*60 ,GREENWICH GMT = 0 UTC +(60*60)= 0 
