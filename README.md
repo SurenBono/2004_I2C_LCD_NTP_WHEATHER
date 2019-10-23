@@ -5,7 +5,8 @@ Simple NTP Wheater Station for GMT +8
 - 2 page left/right scrolled fx
 - 12 h with AM/PM Version
      
-     23-10-19 v5 UPDATE: Added Localised Pressure Unit Conversion from hPa to kPa & psi as to compare to average tyre pressure.
+     23-10-19 v5 UPDATE:
+     Added Localised Pressure Unit Conversion from hPa to kPa & psi as to compare to average tyre pressure.
 
 
   - %a Abbreviated weekday name
